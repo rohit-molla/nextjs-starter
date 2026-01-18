@@ -161,23 +161,41 @@ export function QRModal({ isOpen, onClose }: QRModalProps) {
 
               {/* Content */}
               <div className="p-6">
-                {/* QR Display */}
-                <div className="mb-6 bg-muted/50 rounded-xl p-8 min-h-[280px] flex items-center justify-center">
-                  {qrCode ? (
-                    <motion.img
-                      key={qrCode}
-                      src={qrCode}
-                      alt="WhatsApp QR Code"
-                      className="w-64 h-64 object-contain"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                    />
-                  ) : isLoading ? (
-                    <div className="flex flex-col items-center gap-4">
-                      <div className="w-12 h-12 border-4 border-muted border-t-primary rounded-full animate-spin" />
-                      <p className="text-sm text-muted-foreground">Generating QR...</p>
+                {/* QR Display with Blur Background Effect */}
+                <div className="mb-6 relative">
+                  {/* Blurred background layer */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 rounded-xl blur-2xl"></div>
+                  
+                  {/* Radial glow effect */}
+                  <div className="absolute inset-0 bg-radial rounded-xl opacity-20 blur-3xl bg-gradient-to-br from-primary via-transparent to-transparent"></div>
+                  
+                  {/* QR Container */}
+                  <div className="relative bg-muted/50 rounded-xl p-8 min-h-[280px] flex items-center justify-center backdrop-blur-sm border border-primary/10">
+                    {/* Subtle vignette effect */}
+                    <div className="absolute inset-0 rounded-xl" style={{
+                      background: 'radial-gradient(circle, transparent 40%, rgba(0,0,0,0.1) 100%)',
+                      pointerEvents: 'none'
+                    }}></div>
+                    
+                    {/* QR Code Content */}
+                    <div className="relative z-10">
+                      {qrCode ? (
+                        <motion.img
+                          key={qrCode}
+                          src={qrCode}
+                          alt="WhatsApp QR Code"
+                          className="w-64 h-64 object-contain drop-shadow-2xl"
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                        />
+                      ) : isLoading ? (
+                        <div className="flex flex-col items-center gap-4">
+                          <div className="w-12 h-12 border-4 border-muted border-t-primary rounded-full animate-spin" />
+                          <p className="text-sm text-muted-foreground">Generating QR...</p>
+                        </div>
+                      ) : null}
                     </div>
-                  ) : null}
+                  </div>
                 </div>
 
                 {/* Status Message */}
