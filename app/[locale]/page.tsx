@@ -8,6 +8,7 @@ import { MagicCard } from '@/components/ui/magic-card';
 import { StickyBanner } from '@/components/ui/sticky-banner';
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip';
 import { Button } from '@/components/ui/button';
+import { QRModal } from '@/components/qr-modal';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -151,7 +152,7 @@ function LanguageSwitcher() {
 }
 
 // --- Floating Nav ---
-function FloatingNav() {
+function FloatingNav({ onGetStarted }: { onGetStarted: () => void }) {
   const t = useTranslations('nav');
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
@@ -195,7 +196,15 @@ function FloatingNav() {
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
           <AnimatedThemeToggle variant="rectangle" start="bottom-up" width={52} height={28} />
-          <Button size="sm" className="rounded-full px-4 hidden sm:flex font-semibold gap-2" onMouseEnter={playHover} onClick={playClick}>
+          <Button 
+            size="sm" 
+            className="rounded-full px-4 hidden sm:flex font-semibold gap-2" 
+            onMouseEnter={playHover} 
+            onClick={() => {
+              playClick();
+              onGetStarted();
+            }}
+          >
             <Rocket className="w-4 h-4" />
             <span className="hidden lg:inline">{t('getStarted')}</span>
           </Button>
@@ -549,6 +558,7 @@ function UtilitiesShowcase() {
 export default function Home() {
   const t = useTranslations();
   const { playHover, playClick } = useSoundEffects(0.2);
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
   
   return (
     <div className="min-h-screen text-foreground selection:bg-primary/30 font-sans overflow-x-hidden">
@@ -570,7 +580,7 @@ export default function Home() {
         </span>
       </StickyBanner>
       
-      <FloatingNav />
+      <FloatingNav onGetStarted={() => setIsQRModalOpen(true)} />
       <Suspense fallback={null}>
         <SpotifyModal playlistId="37i9dQZF1DWWY64wDtewQt" position="bottom-left" />
         <BackToTop position="bottom-right" />
@@ -630,7 +640,10 @@ export default function Home() {
             <InteractiveHoverButton 
               className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 bg-primary text-primary-foreground"
               onMouseEnter={playHover}
-              onClick={playClick}
+              onClick={() => {
+                playClick();
+                setIsQRModalOpen(true);
+              }}
             >
               {t('hero.ctaPrimary')}
             </InteractiveHoverButton>
@@ -950,11 +963,25 @@ export default function Home() {
               {t('cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-              <Button size="lg" className="h-14 px-8 rounded-full text-base font-bold gap-2">
+              <Button 
+                size="lg" 
+                className="h-14 px-8 rounded-full text-base font-bold gap-2"
+                onMouseEnter={playHover}
+                onClick={() => {
+                  playClick();
+                  setIsQRModalOpen(true);
+                }}
+              >
                 <Rocket className="w-5 h-5" />
                 {t('cta.primary')}
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 rounded-full text-base gap-2">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="h-14 px-8 rounded-full text-base gap-2"
+                onMouseEnter={playHover}
+                onClick={playClick}
+              >
                 <BookOpen className="w-5 h-5" />
                 {t('cta.secondary')}
               </Button>
@@ -1015,6 +1042,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* QR Modal */}
+      <QRModal isOpen={isQRModalOpen} onClose={() => setIsQRModalOpen(false)} />
     </div>
   );
 }
