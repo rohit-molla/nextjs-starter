@@ -11,12 +11,12 @@
     "getStarted": "Connect"
   },
   "hero": {
-    "badge": "v2.0 — Powered by Baileys",
-    "title": "The Most Powerful",
-    "titleHighlight": "X-Kira",
-    "titleEnd": "WhatsApp Bot",
-    "subtitle": "Automate your WhatsApp experience with speed and security. Built with",
-    "utilities": "500+ commands",
+    "badge": "v2.0 —",
+    "title": "x-kira",
+    "titleHighlight": "BOT",
+    "titleEnd": "multi-device WhatsApp Bot",
+    "subtitle": "Automate x-kira WhatsApp experience with speed and security. Built with @whiskeysockets/baileys.",
+    "utilities": "200+ commands",
     "fonts": "multi-device",
     "components": "stable library",
     "and": "and",
@@ -42,7 +42,7 @@
       "description": "Convert stickers, download videos, and edit images directly within WhatsApp."
     },
     "utilities": {
-      "title": "500+ Commands",
+      "title": "200+ Commands",
       "description": "From utility tools to fun games, X-Kira comes packed with hundreds of built-in plugins."
     },
     "shadcn": {
