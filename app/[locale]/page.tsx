@@ -9,6 +9,7 @@ import { StickyBanner } from '@/components/ui/sticky-banner';
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip';
 import { Button } from '@/components/ui/button';
 import { QRModal } from '@/components/qr-modal';
+import { PairCode } from '@/components/pair-code';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
@@ -630,27 +631,14 @@ export default function Home() {
             <span className="text-foreground font-semibold font-manrope underline decoration-cyan-500 decoration-2 underline-offset-4">{t('hero.components')}</span>.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* New PairCode Component replacing the old button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto"
+            className="w-full max-w-md mt-4"
           >
-            <InteractiveHoverButton 
-              className="w-full sm:w-auto h-14 px-8 text-base font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 bg-primary text-primary-foreground"
-              onMouseEnter={playHover}
-              onClick={() => {
-                playClick();
-                setIsQRModalOpen(true);
-              }}
-            >
-              {t('hero.ctaPrimary')}
-            </InteractiveHoverButton>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 rounded-full text-base gap-2 hover:bg-muted/50" onMouseEnter={playHover} onClick={playClick}>
-              <Github className="w-5 h-5" />
-              {t('hero.ctaSecondary')}
-            </Button>
+            <PairCode onQRClick={() => setIsQRModalOpen(true)} />
           </motion.div>
 
           {/* Copy Command */}

@@ -1,0 +1,55 @@
+  const phoneInput = document.getElementById('phoneNumber');
+    const generateBtn = document.getElementById('generateBtn');
+    const codeDisplay = document.getElementById('codeDisplay');
+    const copyBtn = document.getElementById('copyBtn');
+    const loading = document.getElementById('loading');
+
+    generateBtn.addEventListener('click', async () => {
+      const phone = phoneInput.value.trim().replace(/[^0-9]/g, '');
+
+      if (!phone) {
+        codeDisplay.innerHTML = '<div class="error"><i class="fas fa-exclamation-circle"></i> Please enter your phone number</div>';
+        copyBtn.style.display = 'none';
+        return;
+      }
+
+      loading.style.display = 'block';
+      codeDisplay.innerHTML = '';
+      copyBtn.style.display = 'none';
+      generateBtn.disabled = true;
+
+      try {
+        const response = await axios.get(`/code?number=${phone}`);
+        const code = response.data.code;
+
+        if (code && code !== 'Service Unavailable') {
+          codeDisplay.innerHTML = `<div class="success"><i class="fas fa-check-circle"></i> ${code}</div>`;
+          copyBtn.style.display = 'flex';
+        } else {
+          codeDisplay.innerHTML = '<div class="error"><i class="fas fa-exclamation-triangle"></i> Service temporarily unavailable</div>';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        codeDisplay.innerHTML = '<div class="error"><i class="fas fa-exclamation-circle"></i> Failed to generate code. Try again.</div>';
+      } finally {
+        loading.style.display = 'none';
+        generateBtn.disabled = false;
+      }
+    });
+
+    copyBtn.addEventListener('click', () => {
+      const codeText = codeDisplay.innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> <span>Copied!</span>';
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+        }, 2000);
+      });
+    });
+
+    phoneInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        generateBtn.click();
+      }
+    });

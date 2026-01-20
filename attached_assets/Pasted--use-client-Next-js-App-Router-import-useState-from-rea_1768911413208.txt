@@ -1,0 +1,113 @@
+"use client"; // Next.js App Router ব্যবহার করলে এটা লাগবে
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function ExpandableCard() {
+  // তিনটি স্টেজ: 'idle' (শুরু), 'options' (মাঝের বাটন), 'final' (QR/Code ভিউ)
+  const [view, setView] = useState("idle"); 
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      
+      {/* মেইন কন্টেইনার যেটার সাইজ চেঞ্জ হবে */}
+      <motion.div
+        layout // এই প্রপসটাই ম্যাজিক করে, সাইজ চেঞ্জ হলে স্মুথ এনিমেশন হবে
+        transition={{ layout: { duration: 0.4, type: "spring" } }}
+        className="bg-white rounded-2xl shadow-xl overflow-hidden"
+        style={{ width: view === "idle" ? "auto" : "320px" }} // বড় হলে ফিক্সড উইডথ, ছোট থাকলে অটো
+      >
+        <motion.div layout className="p-4">
+          
+          <AnimatePresence mode="wait">
+            
+            {/* STAGE 1: Get Started Button */}
+            {view === "idle" && (
+              <motion.button
+                key="start-btn"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setView("options")}
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+              </motion.button>
+            )}
+
+            {/* STAGE 2: Options (Pair with Code / QR) */}
+            {view === "options" && (
+              <motion.div
+                key="options-view"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="flex flex-col gap-3"
+              >
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Choose Method</h3>
+                
+                <button
+                  onClick={() => {
+                    setView("final");
+                    setSelectedOption("Code");
+                  }}
+                  className="bg-gray-100 p-3 rounded-lg hover:bg-gray-200 text-left font-medium"
+                >
+                  🔢 Pair with Code
+                </button>
+                
+                <button
+                   onClick={() => {
+                    setView("final");
+                    setSelectedOption("QR");
+                  }}
+                  className="bg-gray-100 p-3 rounded-lg hover:bg-gray-200 text-left font-medium"
+                >
+                  📷 Pair with QR
+                </button>
+
+                {/* ব্যাক বাটন (অপশনাল) */}
+                <button 
+                  onClick={() => setView("idle")}
+                  className="text-xs text-gray-400 mt-2 hover:text-gray-600"
+                >
+                  Cancel
+                </button>
+              </motion.div>
+            )}
+
+            {/* STAGE 3: Final View (QR or Code Display) */}
+            {view === "final" && (
+              <motion.div
+                key="final-view"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                className="text-center py-6"
+              >
+                <div className="text-4xl mb-4">
+                  {selectedOption === "QR" ? "📷" : "🔢"}
+                </div>
+                <h3 className="text-xl font-bold mb-2">
+                  {selectedOption === "QR" ? "Scan QR Code" : "Enter Code"}
+                </h3>
+                <p className="text-gray-500 text-sm mb-4">
+                   Follow the instructions on your device.
+                </p>
+                
+                <button
+                  onClick={() => setView("options")}
+                  className="text-blue-600 font-medium text-sm hover:underline"
+                >
+                  &larr; Go Back
+                </button>
+              </motion.div>
+            )}
+
+          </AnimatePresence>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
