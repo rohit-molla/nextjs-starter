@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "title": "Ourin - Next.js Boilerplate",
+    "description": "آپ کے Next.js پروجیکٹ کے لیے اجزاء، ہُکس اور یوٹیلٹیز کا ایک رائے شدہ مجموعہ۔"
+  },
+  "nav": {
+    "features": "خصوصیات",
+    "fonts": "فونٹس",
+    "stats": "شماریات",
+    "docs": "دستاویزات",
+    "getStarted": "شروع کریں"
+  },
+  "hero": {
+    "badge": "v1.3 — اب i18n کے ساتھ!",
+    "title": "حتمی",
+    "titleHighlight": "Next.js",
+    "titleEnd": "Boilerplate",
+    "subtitle": "ریکارڈ وقت میں اپنا سٹارٹ اپ چلائیں۔ پیک شدہ",
+    "utilities": "185+ یوٹیلٹیز",
+    "fonts": "16 فونٹس",
+    "components": "پریمیم اجزاء",
+    "and": "اور",
+    "ctaPrimary": "مفت شروع کریں",
+    "ctaSecondary": "GitHub پر ستارہ لگائیں"
+  },
+  "stats": {
+    "utilities": "یوٹیلٹی فنکشنز",
+    "fonts": "Google فونٹس",
+    "hooks": "کسٹم ہُکس",
+    "css": "CSS لائنیں"
+  },
+  "features": {
+    "sectionLabel": "خصوصیات",
+    "title": "آپ کو جو کچھ چاہیے",
+    "subtitle": "جدید ویب ایپلیکیشنز بنانے کے لیے ایک مکمل بنیاد جس میں بہترین طریقے شامل ہوں۔",
+    "turbopack": {
+      "title": "Turbopack تیار",
+      "description": "Next.js Turbopack کے ساتھ 10x تیز بلڈز کا تجربہ کریں۔ بہترین ترقیاتی تجربہ کے لیے پہلے سے ترتیب شدہ۔"
+    },
+    "fonts": {
+      "title": "16 پریمیم فونٹس",
+      "description": "ڈسپلے، بڈی، سیریف، مونو اور ہاتھ سے لکھے فونٹس کے ساتھ احتیاط سے تیار کردہ ٹائپوگرافی نظام۔"
+    },
+    "utilities": {
+      "title": "185+ یوٹیلٹیز",
+      "description": "سٹرنگز، سرنیز، تاریخوں، تصدیق، کریپٹو اور بہت کچھ کے لیے مددگار فنکشنز کی بھاری لائبریری۔"
+    },
+    "shadcn": {
+      "title": "shadcn/ui تیار",
+      "description": "خوبصورت، رسائی یوگ اجزاء کے لیے shadcn/ui کے ساتھ پہلے سے ترتیب شدہ۔"
+    },
+    "typescript": {
+      "title": "Type Safe",
+      "description": "پورے پروجیکٹ میں سخت TypeScript۔ کوئی 'any' اقسام نہیں، مکمل IntelliSense معاونت۔"
+    },
+    "hooks": {
+      "title": "20+ کسٹم ہُکس",
+      "description": "ڈیبائونسنگ، ڈیٹا فیچنگ، کاؤنٹ ڈاؤن ٹائمرز اور بہت کچھ کے لیے پروڈکشن تیار ہُکس۔"
+    },
+    "i18n": {
+      "title": "i18n بنایا ہوا",
+      "description": "next-intl کے ساتھ مکمل بین الاقوامی سپورٹ۔ آسانی سے متعدد زبانیں شامل کریں۔"
+    },
+    "middleware": {
+      "title": "Middleware تیار",
+      "description": "سیکیورٹی ہیڈرز، CORS اور توثیق کے نمونوں کے ساتھ پہلے سے ترتیب شدہ middleware۔"
+    }
+  },
+  "typography": {
+    "sectionLabel": "ٹائپوگرافی",
+    "title": "16 خوبصورت فونٹس",
+    "subtitle": "بہترین کارکردگی کے لیے next/font کے ساتھ پہلے سے لوڈ کیے گئے۔ کوئی لے آؤٹ شفٹ نہیں، خودکار بہتری۔"
+  },
+  "code": {
+    "sectionLabel": "ڈیولپر کا تجربہ",
+    "title": "خوشی بخش کوڈ",
+    "subtitle": "بدیہی یوٹیلٹیز اور ہُکس جو React میں بنے ہوں۔",
+    "handwritten": "مزید utils.ts کاپی پیسٹ کی ضرورت نہیں!",
+    "fullyTyped": "مکمل طور پر ٹائپ کیا گیا",
+    "treeShakeable": "ٹری Shakeable",
+    "zeroDeps": "صفر منحصرات"
+  },
+  "updates": {
+    "sectionLabel": "نیا کیا ہے",
+    "title": "ورژن اپڈیٹس",
+    "subtitle": "ہر رہائی میں کیا شامل کیا گیا ہے دیکھیں۔",
+    "v13": {
+      "title": "v1.3 — بین الاقوامیکرن",
+      "description": "next-intl کے ساتھ مکمل i18n سپورٹ۔ اردو اور انگریزی شامل۔ دوسری زبانیں شامل کرنا آسان۔"
+    },
+    "v12": {
+      "title": "v1.2 — API اور Middleware",
+      "description": "CRUD، pagination کے ساتھ نمونہ API روٹس۔ سیکیورٹی ہیڈرز اور CORS کے ساتھ middleware۔"
+    },
+    "v11": {
+      "title": "v1.1 — بڑھتی ہوئی ٹائپوگرافی",
+      "description": "10 نئے فونٹس شامل کیے گئے (کل 16)۔ متحرک اور گریڈیئنٹ اثرات کے ساتھ پریمیم UI دوبارہ ڈیزائن۔"
+    },
+    "v10": {
+      "title": "v1.0 — ابتدائی رہائی",
+      "description": "145+ یوٹیلٹیز، 15+ ہُکس، 6 فونٹس، shadcn/ui، Tailwind 4، Next.js 16، React 19۔"
+    }
+  },
+  "cta": {
+    "title": "تیزی سے بھیجنے کے لیے تیار ہیں؟",
+    "subtitle": "آج ہی Ourin کے ساتھ اپنا اگلا پروجیکٹ بنانا شروع کریں۔ مفت، کھلا ذریعہ اور MIT لائسنس شدہ۔",
+    "primary": "تعمیر شروع کریں",
+    "secondary": "دستاویزات پڑھیں"
+  },
+  "footer": {
+    "description": "جدید ویب ترقی کے لیے حتمی Next.js boilerplate۔ ریکارڈ وقت میں اپنا سٹارٹ اپ بنائیں۔",
+    "quickLinks": "فوری روابط",
+    "legal": "قانونی",
+    "privacy": "رازداری کی پالیسی",
+    "terms": "خدمات کی شرائط",
+    "license": "MIT لائسنس",
+    "madeWith": "ساتھ بنایا گیا",
+    "by": "بذریعہ",
+    "starUs": "GitHub پر ہمیں ستارہ دیں"
+  },
+  "languageSwitcher": {
+    "label": "زبان",
+    "en": "English",
+    "id": "Bahasa Indonesia",
+    "hi": "हिन्दी",
+    "bn": "বাংলা",
+    "ur": "اردو"
+  },
+  "pairCode": {
+    "chooseMethod": "طریقہ منتخب کریں",
+    "pairWithQR": "QR کے ساتھ جوڑی کریں",
+    "scanQR": "منسلک کرنے کے لیے QR کوڈ اسکین کریں",
+    "pairWithCode": "کوڈ کے ساتھ جوڑی کریں",
+    "enterPhone": "کوڈ حاصل کرنے کے لیے فون نمبر درج کریں",
+    "cancel": "منسوخ کریں",
+    "pairingCode": "آپ کا جوڑی کوڈ",
+    "enterCode": "منسلک کرنے کے لیے اپنے ڈیوائس پر یہ کوڈ درج کریں",
+    "copy": "کوڈ کاپی کریں",
+    "copied": "کلپ بورڈ پر کاپی کیا!",
+    "tryAnother": "دوسرا نمبر آزمائیں",
+    "phoneError": "براہ کرم اپنا فون نمبر درج کریں",
+    "timeoutError": "کنکشن ختم۔ براہ کرم دوبارہ کوشش کریں۔",
+    "failedError": "کوڈ بنانے میں ناکامی۔ دوبارہ کوشش کریں۔"
+  }
+}

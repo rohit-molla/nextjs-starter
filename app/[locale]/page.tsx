@@ -135,17 +135,26 @@ function LanguageSwitcher() {
           animate={{ opacity: 1, y: 0 }}
           className="absolute right-0 top-full mt-2 bg-card border rounded-xl shadow-lg overflow-hidden min-w-[150px] z-50"
         >
-          {routing.locales.map((locale) => (
-            <button
-              key={locale}
-              onClick={() => handleLocaleChange(locale)}
-              onMouseEnter={playHover}
-              className="w-full px-4 py-2.5 text-left text-sm hover:bg-muted transition-colors flex items-center gap-2"
-            >
-              <span className="text-lg">{locale === 'en' ? '🇺🇸' : '🇮🇩'}</span>
-              {t(locale)}
-            </button>
-          ))}
+          {routing.locales.map((locale) => {
+            const flagMap: { [key: string]: string } = {
+              en: '🇺🇸',
+              id: '🇮🇩',
+              hi: '🇮🇳',
+              bn: '🇧🇩',
+              ur: '🇵🇰'
+            };
+            return (
+              <button
+                key={locale}
+                onClick={() => handleLocaleChange(locale)}
+                onMouseEnter={playHover}
+                className="w-full px-4 py-2.5 text-left text-sm hover:bg-muted transition-colors flex items-center gap-2"
+              >
+                <span className="text-lg">{flagMap[locale] || '🌐'}</span>
+                {t(locale)}
+              </button>
+            );
+          })}
         </motion.div>
       )}
     </div>

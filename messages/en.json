@@ -121,7 +121,10 @@
   "languageSwitcher": {
     "label": "Language",
     "en": "English",
-    "id": "Bahasa Indonesia"
+    "id": "Bahasa Indonesia",
+    "hi": "हिन्दी",
+    "bn": "বাংলা",
+    "ur": "اردو"
   },
   "pairCode": {
     "chooseMethod": "Choose Method",
