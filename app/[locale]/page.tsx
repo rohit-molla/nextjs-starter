@@ -391,14 +391,14 @@ function CopyCommand() {
 function FontShowcase() {
   const { playHover } = useSoundEffects(0.1);
   const fonts = [
-    { name: 'Outfit', class: 'font-display', desc: 'Modern headings' },
-    { name: 'Space Grotesk', class: 'font-space', desc: 'Tech & bold' },
-    { name: 'Poppins', class: 'font-poppins', desc: 'Friendly & clean' },
-    { name: 'Plus Jakarta Sans', class: 'font-sans', desc: 'Body text' },
-    { name: 'Playfair Display', class: 'font-serif', desc: 'Elegant serif' },
-    { name: 'JetBrains Mono', class: 'font-mono', desc: 'Code blocks' },
-    { name: 'Caveat', class: 'font-hand', desc: 'Handwritten' },
-    { name: 'Inter', class: 'font-inter', desc: 'UI labels' },
+    { name: 'Broadcast', class: 'font-display', desc: 'Send to all chats' },
+    { name: 'Self/Public', class: 'font-space', desc: 'Mode switching' },
+    { name: 'Join/Leave', class: 'font-poppins', desc: 'Group management' },
+    { name: 'Block/Unblock', class: 'font-sans', desc: 'User control' },
+    { name: 'Update Bio', class: 'font-serif', desc: 'Profile settings' },
+    { name: 'Clear Chats', class: 'font-mono', desc: 'Database cleanup' },
+    { name: 'Get Session', class: 'font-hand', desc: 'Export session' },
+    { name: 'Restart Bot', class: 'font-inter', desc: 'Reboot instance' },
   ];
 
   return (
@@ -429,14 +429,14 @@ function FontShowcase() {
 function HooksShowcase() {
   const { playHover } = useSoundEffects(0.1);
   const hooks = [
-    { name: 'useDebounce', desc: 'Delay value updates', font: 'font-space', color: 'from-violet-500/20 to-purple-500/10' },
-    { name: 'useFetch', desc: 'Declarative data fetching', font: 'font-poppins', color: 'from-blue-500/20 to-cyan-500/10' },
-    { name: 'useLocalStorage', desc: 'Persistent state', font: 'font-raleway', color: 'from-emerald-500/20 to-green-500/10' },
-    { name: 'useMediaQuery', desc: 'Responsive breakpoints', font: 'font-manrope', color: 'from-orange-500/20 to-amber-500/10' },
-    { name: 'useCountdown', desc: 'Timer with controls', font: 'font-inter', color: 'from-pink-500/20 to-rose-500/10' },
-    { name: 'useNetworkStatus', desc: 'Online/offline tracking', font: 'font-nunito', color: 'from-teal-500/20 to-cyan-500/10' },
-    { name: 'useIntersectionObserver', desc: 'Viewport detection', font: 'font-dm', color: 'from-indigo-500/20 to-blue-500/10' },
-    { name: 'useKeyboardShortcut', desc: 'Hotkey bindings', font: 'font-source', color: 'from-red-500/20 to-orange-500/10' },
+    { name: 'onMessage', desc: 'Handle incoming messages', font: 'font-space', color: 'from-violet-500/20 to-purple-500/10' },
+    { name: 'onGroupUpdate', desc: 'Monitor group changes', font: 'font-poppins', color: 'from-blue-500/20 to-cyan-500/10' },
+    { name: 'onPresence', desc: 'Track user online status', font: 'font-raleway', color: 'from-emerald-500/20 to-green-500/10' },
+    { name: 'onCall', desc: 'Manage incoming calls', font: 'font-manrope', color: 'from-orange-500/20 to-amber-500/10' },
+    { name: 'useCommand', desc: 'Register new bot commands', font: 'font-inter', color: 'from-pink-500/20 to-rose-500/10' },
+    { name: 'useSession', desc: 'Manage bot authentication', font: 'font-nunito', color: 'from-teal-500/20 to-cyan-500/10' },
+    { name: 'useMedia', desc: 'Process images and videos', font: 'font-dm', color: 'from-indigo-500/20 to-blue-500/10' },
+    { name: 'useCooldown', desc: 'Prevent command spamming', font: 'font-source', color: 'from-red-500/20 to-orange-500/10' },
   ];
 
   return (
@@ -455,7 +455,7 @@ function HooksShowcase() {
           <div className="absolute top-2 right-2 opacity-10 group-hover:opacity-20 transition-opacity">
             <Boxes className="w-12 h-12" />
           </div>
-          <div className={`font-mono text-xs text-primary/80 mb-1`}>hook</div>
+          <div className={`font-mono text-xs text-primary/80 mb-1`}>event</div>
           <h4 className={`${hook.font} font-bold text-base mb-1 group-hover:text-primary transition-colors`}>
             {hook.name}
           </h4>
@@ -470,49 +470,49 @@ function HooksShowcase() {
 function UtilitiesShowcase() {
   const categories = [
     { 
-      name: 'String', 
-      count: 18, 
-      examples: ['capitalize', 'slugify', 'truncate'], 
+      name: 'Downloader', 
+      count: 45, 
+      examples: ['youtube', 'tiktok', 'instagram'], 
       font: 'font-display',
       icon: <Type className="w-5 h-5" />,
       color: 'from-violet-500 to-purple-600'
     },
     { 
-      name: 'Array', 
-      count: 22, 
-      examples: ['chunk', 'shuffle', 'groupBy'], 
+      name: 'Converter', 
+      count: 30, 
+      examples: ['toSticker', 'toAudio', 'toVideo'], 
       font: 'font-space',
       icon: <Layers className="w-5 h-5" />,
       color: 'from-blue-500 to-cyan-600'
     },
     { 
-      name: 'Date', 
-      count: 12, 
-      examples: ['formatDate', 'timeAgo', 'daysBetween'], 
+      name: 'Group', 
+      count: 25, 
+      examples: ['add', 'kick', 'promote'], 
       font: 'font-poppins',
       icon: <History className="w-5 h-5" />,
       color: 'from-emerald-500 to-teal-600'
     },
     { 
-      name: 'Validation', 
-      count: 10, 
-      examples: ['isEmail', 'isURL', 'validatePassword'], 
+      name: 'Anime', 
+      count: 60, 
+      examples: ['search', 'waifu', 'character'], 
       font: 'font-raleway',
       icon: <Shield className="w-5 h-5" />,
       color: 'from-orange-500 to-amber-600'
     },
     { 
-      name: 'Crypto', 
-      count: 14, 
-      examples: ['uuid', 'sha256', 'base64Encode'], 
+      name: 'Tools', 
+      count: 80, 
+      examples: ['ai', 'google', 'translate'], 
       font: 'font-manrope',
       icon: <Code2 className="w-5 h-5" />,
       color: 'from-pink-500 to-rose-600'
     },
     { 
-      name: 'Async', 
-      count: 10, 
-      examples: ['retry', 'debounce', 'throttle'], 
+      name: 'Game', 
+      count: 50, 
+      examples: ['tebakgambar', 'susunkata', 'rpg'], 
       font: 'font-inter',
       icon: <Zap className="w-5 h-5" />,
       color: 'from-indigo-500 to-violet-600'
@@ -547,7 +547,7 @@ function UtilitiesShowcase() {
           </div>
           
           <h4 className={`${cat.font} font-bold text-xl mb-2 group-hover:text-primary transition-colors`}>
-            {cat.name} Utils
+            {cat.name} Commands
           </h4>
           
           <div className="flex flex-wrap gap-1.5">

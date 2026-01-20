@@ -67,18 +67,18 @@
     }
   },
   "typography": {
-    "sectionLabel": "Modules",
-    "title": "Modular Architecture",
-    "subtitle": "Easily extend X-Kira with custom plugins and modules. Add functionality as you need it."
+    "sectionLabel": "Owner Menu",
+    "title": "Advanced Owner Controls",
+    "subtitle": "Exclusive features for bot administrators and group owners. Complete control over your bot instance."
   },
   "code": {
-    "sectionLabel": "Deployment",
-    "title": "Simple Deployment",
-    "subtitle": "Get your bot up and running in minutes with our streamlined connection process.",
-    "handwritten": "No complex setup required!",
-    "fullyTyped": "Docker Ready",
-    "treeShakeable": "Session Cloud",
-    "zeroDeps": "Easy Pairing"
+    "sectionLabel": "Plugin System",
+    "title": "Powerful Plugin Engine",
+    "subtitle": "A robust system for handling events, messages, and custom commands with ease.",
+    "handwritten": "Modular and scalable!",
+    "fullyTyped": "Event Driven",
+    "treeShakeable": "Hot Reload",
+    "zeroDeps": "Easy Setup"
   },
   "updates": {
     "sectionLabel": "Release Notes",
