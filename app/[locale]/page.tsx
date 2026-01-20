@@ -197,8 +197,8 @@ function FloatingNav({ onGetStarted }: { onGetStarted: () => void }) {
         </Link>
         
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-foreground/70">
-          <a href="#features" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('nav.features')}</a>
-          <a href="#hooks" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('nav.fonts')}</a>
+          <a href="#features" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('features')}</a>
+          <a href="#hooks" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('fonts')}</a>
           <a href="#utilities" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>Status</a>
           <a href="#fonts" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>Docs</a>
         </div>
