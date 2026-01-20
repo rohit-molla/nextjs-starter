@@ -1,19 +1,19 @@
-# Ourin - The Ultimate Next.js Boilerplate
+# x-kiraaaaaa - The Ultimate Next.js Boilerplate
 
 <div align="center">
-  <img src="public/logo.png" alt="Ourin Logo" width="240" />
+  <img src="public/logo.png" alt="x-kira Logo" width="240" />
   <h3>Ship your startup in record time.</h3>
   <p>An opinionated, production-ready starter kit for modern web applications.</p>
   
   <br />
   
-  <a href="https://ourin-nextjs-starter.vercel.app/">
+  <a href="https://x-kira-nextjs-starter.vercel.app/">
     <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_Site-8B5CF6?style=for-the-badge" alt="Live Demo" />
   </a>
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/LuckyArch/ourin-nextjs-starter?style=flat-square&color=8B5CF6" alt="Version" />
+  <img src="https://img.shields.io/github/v/release/LuckyArch/x-kira-nextjs-starter?style=flat-square&color=8B5CF6" alt="Version" />
   <img src="https://img.shields.io/github/license/LuckyArch/ourin-nextjs-starter?style=flat-square" alt="License" />
   <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js" alt="Next.js" />
@@ -24,7 +24,7 @@
 <p align="center">
   <a href="#-key-features">Features</a> •
   <a href="#-getting-started">Quick Start</a> •
-  <a href="https://ourin-nextjs-starter.vercel.app/">Demo</a> •
+  <a href="https://x-kira-nextjs-starter.vercel.app/">Demo</a> •
   <a href="#-contributing">Contributing</a>
 </p>
 
@@ -73,7 +73,7 @@
 
 ## 🌟 Introduction
 
-**Ourin** is not just another Next.js template. It's a meticulously crafted architectural foundation designed to eliminate the repetitive setup phase of every new project. Whether you're building a SaaS product, a marketing site, or an internal tool, Ourin provides a rock-solid starting point that adheres to industry best practices.
+**x-kiraaaaaa** is not just another Next.js template. It's a meticulously crafted architectural foundation designed to eliminate the repetitive setup phase of every new project. Whether you're building a SaaS product, a marketing site, or an internal tool, Ourin provides a rock-solid starting point that adheres to industry best practices.
 
 We believe developers should spend their time building features, not configuring build tools or copy-pasting utility functions from old projects. That's why Ourin comes pre-loaded with everything you need: a massive library of **185+ utility functions**, **20+ custom React hooks**, a **premium 16-font typography system**, example API routes, and a production-ready middleware.
 
@@ -150,7 +150,7 @@ cd my-app
 pnpm dev
 ```
 
-This will create a new Next.js project using Ourin as the template in a folder called `my-app`.
+This will create a new Next.js project using x-kiraa as the template in a folder called `my-app`.
 
 ### Manual Installation
 
@@ -159,7 +159,7 @@ Alternatively, you can clone the repository directly:
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/LuckyArch/ourin-nextjs-starter.git
-    cd ourin-nextjs-starter
+    cd x-kiraa-nextjs-starter
     ```
 
 2.  **Install dependencies:**
@@ -173,7 +173,7 @@ Alternatively, you can clone the repository directly:
     ```
 
 4.  **Open in your browser:**
-    Navigate to [http://localhost:3000](http://localhost:3000). You should see the Ourin homepage.
+    Navigate to [http://localhost:3000](http://localhost:3000). You should see the x-kira homepage.
 
 ---
 
@@ -182,7 +182,7 @@ Alternatively, you can clone the repository directly:
 The project follows a well-organized, scalable folder structure. Each directory has a clear purpose, making it easy to navigate and extend.
 
 ```
-ourin-nextjs-starter/
+x-kiraa-nextjs-starter/
 ├── app/                        # Next.js App Router
 │   ├── globals.css             # Global styles, Tailwind config, theme variables (850+ lines)
 │   ├── layout.tsx              # Root layout: Fonts, ThemeProvider, metadata
@@ -242,7 +242,7 @@ ourin-nextjs-starter/
 
 ## ✍️ Typography System
 
-Ourin implements a **6-font typography system** to provide maximum flexibility and visual richness. Fonts are loaded efficiently using `next/font/google`, which automatically optimizes font loading and prevents layout shift.
+x-kira implements a **6-font typography system** to provide maximum flexibility and visual richness. Fonts are loaded efficiently using `next/font/google`, which automatically optimizes font loading and prevents layout shift.
 
 ### Font Stack
 
@@ -267,7 +267,7 @@ Apply fonts using Tailwind classes:
 <p className="font-serif italic text-lg">"Build better apps, faster."</p>
 
 // Monospace for code
-<code className="font-mono text-sm">npm install ourin</code>
+<code className="font-mono text-sm">npm install x-kira</code>
 
 // Handwriting for personality
 <span className="font-hand text-2xl">— The Team</span>
@@ -369,7 +369,7 @@ Regex patterns and validation functions.
 import { isEmail, isUrl, isStrongPassword, validateCreditCard } from '@/lib/utils/validation';
 
 isEmail('user@example.com'); // true
-isUrl('https://ourin.dev'); // true
+isUrl('https://x-kira.dev'); // true
 isStrongPassword('P@ssw0rd!'); // { valid: true, score: 4 }
 validateCreditCard('4111...'); // { valid: true, type: 'visa' }
 ```
@@ -465,10 +465,10 @@ Centralize your site's name, description, and URLs.
 
 ```typescript
 export const siteConfig = {
-  name: 'Ourin',
+  name: 'x-kira',
   description: 'The ultimate Next.js boilerplate.',
-  url: 'https://ourin.dev',
-  ogImage: 'https://ourin.dev/og.png',
+  url: 'https://x-kiraa.dev',
+  ogImage: 'https://x-kiraa.dev/og.png',
   links: {
     twitter: 'https://twitter.com/ourin',
     github: 'https://github.com/LuckyArch/ourin-nextjs-starter',

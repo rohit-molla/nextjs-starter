@@ -304,8 +304,8 @@ function FeatureCard({
       <MagicCard
         className="rounded-2xl cursor-pointer h-full"
         gradientColor="rgba(34, 197, 94, 0.1)"
-        gradientFrom="#22c55e"
-        gradientTo="#10b981"
+        gradientFrom="#953db8"
+        gradientTo="#b627c8"
         gradientSize={250}
       >
         <div 
@@ -824,31 +824,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* === Fonts Section === */}
-      <section id="fonts" className="py-20 md:py-28 bg-muted/30 relative">
-        <div className="container px-4 md:px-6 mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto mb-12"
-          >
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider font-mono">{t('typography.sectionLabel')}</span>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mt-3 mb-4 tracking-tight">
-              {t('typography.title')}
-            </h2>
-            <p className="text-lg text-muted-foreground font-sans">
-              {t('typography.subtitle')}
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <FontShowcase />
-          </div>
-        </div>
-      </section>
-
 
       {/* === Utilities Section === */}
       <section id="utilities" className="py-20 md:py-28 bg-muted/30 relative">

@@ -234,7 +234,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🎉 Initial Release
 
-This is the first public release of **Ourin**, the ultimate Next.js boilerplate.
+This is the first public release of **x-kiraa**, the ultimate Next.js boilerplate.
 
 #### Added
 

@@ -1,8 +1,8 @@
-# Ourin - Next.js Boilerplate
+# x-kira - Next.js Boilerplate
 
 ## Overview
 
-Ourin is a production-ready Next.js 16 boilerplate designed to help developers ship web applications quickly. It includes a comprehensive collection of utilities (185+), custom React hooks (20+), premium Google Fonts (16), and pre-configured UI components using shadcn/ui. The project emphasizes developer experience with TypeScript, Tailwind CSS 4, Framer Motion animations, and internationalization support.
+x-kira is a production-ready Next.js 16 boilerplate designed to help developers ship web applications quickly. It includes a comprehensive collection of utilities (185+), custom React hooks (20+), premium Google Fonts (16), and pre-configured UI components using shadcn/ui. The project emphasizes developer experience with TypeScript, Tailwind CSS 4, Framer Motion animations, and internationalization support.
 
 ## User Preferences
 
