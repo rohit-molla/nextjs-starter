@@ -109,7 +109,7 @@ function LanguageSwitcher() {
 
   const handleLocaleChange = (locale: string) => {
     playClick();
-    router.replace(pathname, { locale });
+    router.push(pathname, { locale });
     setIsOpen(false);
   };
 
@@ -630,16 +630,17 @@ export default function Home() {
             <span className="text-foreground font-semibold font-raleway underline decoration-pink-500 decoration-2 underline-offset-4">{t('hero.fonts')}</span>, {t('hero.and')}{' '}
             <span className="text-foreground font-semibold font-manrope underline decoration-cyan-500 decoration-2 underline-offset-4">{t('hero.components')}</span>.
           </motion.p>
-     {/* CTA Buttons */}
+          {/* CTA Section with Pair Code */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-center gap-4 mb-12 justify-center w-full"
           >
-        
-            <PairCode onQRClick={() => setIsQRModalOpen(true)} />
-                  <Button
+            <div className="w-full max-w-md">
+              <PairCode onQRClick={() => setIsQRModalOpen(true)} />
+            </div>
+            <Button
               size="lg"
               variant="outline"
               className="w-full sm:w-auto h-14 px-8 rounded-full text-base gap-2 hover:bg-muted/50"

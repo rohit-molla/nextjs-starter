@@ -122,5 +122,21 @@
     "label": "Language",
     "en": "English",
     "id": "Bahasa Indonesia"
+  },
+  "pairCode": {
+    "chooseMethod": "Choose Method",
+    "pairWithQR": "Pair with QR",
+    "scanQR": "Scan a QR code to connect",
+    "pairWithCode": "Pair with Code",
+    "enterPhone": "Enter phone number to get code",
+    "cancel": "Cancel",
+    "pairingCode": "Your Pairing Code",
+    "enterCode": "Enter this code on your device to connect",
+    "copy": "Copy Code",
+    "copied": "Copied to Clipboard!",
+    "tryAnother": "Try another number",
+    "phoneError": "Please enter your phone number",
+    "timeoutError": "Connection timeout. Please try again.",
+    "failedError": "Failed to generate code. Try again."
   }
 }

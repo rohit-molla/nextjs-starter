@@ -9,7 +9,9 @@ import { useSoundEffects } from "@/hooks/use-sound";
 
 export function PairCode({ onQRClick }: { onQRClick: () => void }) {
   const t = useTranslations();
-  const { playClick, playSuccess } = useSoundEffects(0.15);
+  const tHero = useTranslations('hero');
+  const tPair = useTranslations('pairCode');
+  const { playClick, playSuccess, playHover } = useSoundEffects(0.15);
   const [view, setView] = useState<"idle" | "options" | "code_input" | "code_display">("idle");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [pairCode, setPairCode] = useState("");
@@ -30,7 +32,7 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
   const handleGenerateCode = async () => {
     const phone = phoneNumber.trim().replace(/[^0-9]/g, "");
     if (!phone) {
-      setError("Please enter your phone number");
+      setError(tPair("phoneError"));
       return;
     }
 
@@ -52,9 +54,9 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
     } catch (err: any) {
       console.error("Error generating code:", err);
 
-      let errorMessage = "Failed to generate code. Try again.";
+      let errorMessage = tPair("failedError");
       if (err.code === 'ECONNABORTED') {
-        errorMessage = "Connection timeout. Please try again.";
+        errorMessage = tPair("timeoutError");
       } else if (err.response?.data?.error) {
         errorMessage = err.response.data.error;
       }
@@ -90,14 +92,13 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                 exit={{ opacity: 0 }}
                 className="text-center space-y-4"
               >
-                <h3 className="text-xl font-bold">Get Started</h3>
-                <p className="text-sm text-muted-foreground">Choose how you want to connect</p>
                 <button
+                  onMouseEnter={playHover}
                   onClick={handleGetStarted}
-                  className="w-full bg-primary text-primary-foreground py-3 rounded-2xl font-bold hover:opacity-90 transition-opacity"
+                  className="w-full h-14 px-8 text-base font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 bg-primary text-primary-foreground rounded-full hover:opacity-90 transition-all"
                 >
                   <Rocket className="w-5 h-5 inline mr-2" />
-                  Continue
+                  {tHero("ctaPrimary")}
                 </button>
               </motion.div>
             )}
@@ -110,7 +111,7 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                 exit={{ opacity: 0, y: -20 }}
                 className="flex flex-col gap-4"
               >
-                <h3 className="text-xl font-bold text-center mb-2">Choose Method</h3>
+                <h3 className="text-xl font-bold text-center mb-2">{tPair("chooseMethod")}</h3>
                 
                 <button
                   onClick={onQRClick}
@@ -120,8 +121,8 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                     <QrCode className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="font-bold">Pair with QR</div>
-                    <div className="text-sm text-muted-foreground">Scan a QR code to connect</div>
+                    <div className="font-bold">{tPair("pairWithQR")}</div>
+                    <div className="text-sm text-muted-foreground">{tPair("scanQR")}</div>
                   </div>
                 </button>
 
@@ -133,8 +134,8 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                     <Hash className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="font-bold">Pair with Code</div>
-                    <div className="text-sm text-muted-foreground">Enter phone number to get code</div>
+                    <div className="font-bold">{tPair("pairWithCode")}</div>
+                    <div className="text-sm text-muted-foreground">{tPair("enterPhone")}</div>
                   </div>
                 </button>
 
@@ -142,7 +143,7 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                   onClick={() => setView("idle")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors mt-2"
                 >
-                  Cancel
+                  {tPair("cancel")}
                 </button>
               </motion.div>
             )}
@@ -159,7 +160,7 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                   <button onClick={() => setView("options")} className="p-2 hover:bg-muted rounded-full transition-colors">
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-                  <h3 className="text-xl font-bold">Pair with Code</h3>
+                  <h3 className="text-xl font-bold">{tPair("pairWithCode")}</h3>
                 </div>
 
                 <div className="space-y-4">
@@ -208,8 +209,8 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                 className="flex flex-col items-center gap-6 py-4"
               >
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-bold">Your Pairing Code</h3>
-                  <p className="text-sm text-muted-foreground">Enter this code on your device to connect</p>
+                  <h3 className="text-2xl font-bold">{tPair("pairingCode")}</h3>
+                  <p className="text-sm text-muted-foreground">{tPair("enterCode")}</p>
                 </div>
 
                 <div className="bg-muted p-8 rounded-3xl border-2 border-dashed border-primary/30 w-full flex items-center justify-center relative group">
@@ -226,12 +227,12 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                     {copied ? (
                       <>
                         <Check className="w-5 h-5" />
-                        <span>Copied to Clipboard!</span>
+                        <span>{tPair("copied")}</span>
                       </>
                     ) : (
                       <>
                         <Copy className="w-5 h-5" />
-                        <span>Copy Code</span>
+                        <span>{tPair("copy")}</span>
                       </>
                     )}
                   </button>
@@ -240,7 +241,7 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                     onClick={() => setView("code_input")}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Try another number
+                    {tPair("tryAnother")}
                   </button>
                 </div>
               </motion.div>

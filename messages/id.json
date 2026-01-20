@@ -122,5 +122,21 @@
     "label": "Bahasa",
     "en": "English",
     "id": "Bahasa Indonesia"
+  },
+  "pairCode": {
+    "chooseMethod": "Pilih Metode",
+    "pairWithQR": "Pasang dengan QR",
+    "scanQR": "Pindai kode QR untuk terhubung",
+    "pairWithCode": "Pasang dengan Kode",
+    "enterPhone": "Masukkan nomor telepon untuk mendapatkan kode",
+    "cancel": "Batal",
+    "pairingCode": "Kode Pencocokan Anda",
+    "enterCode": "Masukkan kode ini di perangkat Anda untuk terhubung",
+    "copy": "Salin Kode",
+    "copied": "Disalin ke Papan Klip!",
+    "tryAnother": "Coba nomor lain",
+    "phoneError": "Silakan masukkan nomor telepon Anda",
+    "timeoutError": "Koneksi habis waktu. Silakan coba lagi.",
+    "failedError": "Gagal membuat kode. Coba lagi."
   }
 }
