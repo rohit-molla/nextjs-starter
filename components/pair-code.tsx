@@ -7,8 +7,6 @@ import axios from "axios";
 import { useTranslations } from "next-intl";
 import { useSoundEffects } from "@/hooks/use-sound";
 
-const API_BASE = process.env.API_BASE || "https://pair-mega-iwes.onrender.com";
-
 export function PairCode({ onQRClick }: { onQRClick: () => void }) {
   const t = useTranslations();
   const { playClick, playSuccess } = useSoundEffects(0.15);
@@ -41,19 +39,27 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
     playClick();
 
     try {
-      const response = await axios.get(`${API_BASE}/code?number=${phone}`);
-      const code = response.data.code;
+      // Call server-side API endpoint instead of direct client-side API
+      const response = await axios.get(`/api/code?number=${phone}`, { timeout: 30000 });
 
-      if (code && code !== "Service Unavailable") {
-        setPairCode(code);
+      if (response.data?.success && response.data?.code) {
+        setPairCode(response.data.code);
         setView("code_display");
         playSuccess();
       } else {
-        setError("Service temporarily unavailable");
+        throw new Error(response.data?.error || 'Invalid response');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error("Error generating code:", err);
-      setError("Failed to generate code. Try again.");
+
+      let errorMessage = "Failed to generate code. Try again.";
+      if (err.code === 'ECONNABORTED') {
+        errorMessage = "Connection timeout. Please try again.";
+      } else if (err.response?.data?.error) {
+        errorMessage = err.response.data.error;
+      }
+
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
