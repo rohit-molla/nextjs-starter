@@ -11,7 +11,7 @@ const API_BASE = process.env.API_BASE || "https://pair-mega-iwes.onrender.com";
 
 export function PairCode({ onQRClick }: { onQRClick: () => void }) {
   const t = useTranslations();
-  const { playClick, playSuccess, playError } = useSoundEffects(0.15);
+  const { playClick, playSuccess } = useSoundEffects(0.15);
   const [view, setView] = useState<"idle" | "options" | "code_input" | "code_display">("idle");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [pairCode, setPairCode] = useState("");
@@ -33,7 +33,6 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
     const phone = phoneNumber.trim().replace(/[^0-9]/g, "");
     if (!phone) {
       setError("Please enter your phone number");
-      playError();
       return;
     }
 
@@ -51,12 +50,10 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
         playSuccess();
       } else {
         setError("Service temporarily unavailable");
-        playError();
       }
     } catch (err) {
       console.error("Error generating code:", err);
       setError("Failed to generate code. Try again.");
-      playError();
     } finally {
       setIsLoading(false);
     }
