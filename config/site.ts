@@ -4,38 +4,38 @@
  */
 
 export const siteConfig = {
-  name: 'Ourin',
-  description: 'Next.js 15 Boilerplate with Tailwind CSS 4 and shadcn/ui',
+  name: 'X-Kira',
+  description: 'X-Kira WhatsApp Bot made with @whiskeysockets/baileys library',
   url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   ogImage: '/og-image.png',
   
   // Links
   links: {
-    github: 'https://github.com/LuckyArch/ourin-nextjs-starter',
-    twitter: 'https://twitter.com/LuckyArch',
+    github: 'https://github.com/X-Kira/whatsapp-bot',
+    twitter: 'https://twitter.com/XKiraBot',
     docs: '/docs',
   },
   
   // Creator info
   creator: {
-    name: 'Fauzan Adyatma P',
-    username: 'LuckyArch',
-    url: 'https://github.com/LuckyArch',
+    name: 'X-Kira Team',
+    username: 'X-Kira',
+    url: 'https://github.com/X-Kira',
   },
   
   // SEO defaults
   seo: {
-    titleTemplate: '%s | Ourin',
-    defaultTitle: 'Ourin - Next.js Boilerplate',
+    titleTemplate: '%s | X-Kira',
+    defaultTitle: 'X-Kira - WhatsApp Bot',
     defaultDescription:
-      'A modern Next.js 15 boilerplate with Tailwind CSS 4, shadcn/ui, and comprehensive utilities.',
+      'X-Kira WhatsApp Bot made with @whiskeysockets/baileys library. Fast, reliable, and feature-rich.',
     keywords: [
-      'Next.js',
-      'React',
-      'Tailwind CSS',
-      'shadcn/ui',
+      'WhatsApp Bot',
+      'X-Kira',
+      'Baileys',
+      'Automation',
       'TypeScript',
-      'Boilerplate',
+      'WhatsApp API',
     ],
   },
   

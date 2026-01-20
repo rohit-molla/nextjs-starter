@@ -192,15 +192,15 @@ function FloatingNav({ onGetStarted }: { onGetStarted: () => void }) {
           : 'bg-background/60 border-white/10'
       }`}>
         <Link href="/" className="flex items-center gap-3" onMouseEnter={playHover}>
-          <Image src="/logo.png" alt="Ourin Logo" width={32} height={32} className="rounded-full" />
-          <span className="font-display font-bold text-lg tracking-tight hidden sm:inline">Ourin</span>
+          <Image src="/logo.png" alt="X-Kira Logo" width={32} height={32} className="rounded-full" />
+          <span className="font-display font-bold text-lg tracking-tight hidden sm:inline">X-Kira</span>
         </Link>
         
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-foreground/70">
-          <a href="#features" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('features')}</a>
-          <a href="#hooks" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>Hooks</a>
-          <a href="#utilities" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>Utils</a>
-          <a href="#fonts" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('fonts')}</a>
+          <a href="#features" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('nav.features')}</a>
+          <a href="#hooks" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>{t('nav.fonts')}</a>
+          <a href="#utilities" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>Status</a>
+          <a href="#fonts" className="hover:text-foreground transition-colors" onMouseEnter={playHover} onClick={playClick}>Docs</a>
         </div>
 
         <div className="flex items-center gap-2">
@@ -349,8 +349,8 @@ function UpdateCard({ version, title, description, isLatest = false }: { version
 function CopyCommand() {
   const [copied, setCopied] = useState(false);
   const { playHover, playClick, playSuccess } = useSoundEffects(0.15);
-  const displayCommand = "npx create-next-app -e https://github.com/LuckyArch/ourin-nextjs-starter";
-  const fullCommand = "npx create-next-app -e https://github.com/LuckyArch/ourin-nextjs-starter";
+  const displayCommand = "git clone https://github.com/X-Kira/whatsapp-bot";
+  const fullCommand = "git clone https://github.com/X-Kira/whatsapp-bot && cd whatsapp-bot && npm install";
 
   const handleCopy = async () => {
     playClick();
@@ -579,12 +579,12 @@ export default function Home() {
       
       {/* Announcement Banner */}
       <StickyBanner 
-        className="bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600"
+        className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600"
         hideOnScroll
       >
         <span className="text-white text-sm font-medium">
-          🎉 <strong>v1.5.0</strong> is here! Sound System, Spotify Player, and more. 
-          <a href="https://github.com/LuckyArch/ourin-nextjs-starter" className="underline ml-2 hover:text-white/80">
+          🎉 <strong>X-Kira v2.0</strong> is here! New Baileys integration, faster response, and 500+ commands. 
+          <a href="https://github.com/X-Kira/whatsapp-bot" className="underline ml-2 hover:text-white/80">
             View on GitHub →
           </a>
         </span>

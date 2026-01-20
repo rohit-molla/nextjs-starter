@@ -1,122 +1,122 @@
 {
   "metadata": {
-    "title": "Ourin - Next.js Boilerplate",
-    "description": "An opinionated collection of components, hooks, and utilities for your Next.js project."
+    "title": "X-Kira - WhatsApp Bot",
+    "description": "X-Kira WhatsApp Bot made with @whiskeysockets/baileys library. Fast, reliable, and feature-rich."
   },
   "nav": {
-    "features": "Features",
-    "fonts": "Fonts",
-    "stats": "Stats",
-    "docs": "Docs",
-    "getStarted": "Get Started"
+    "features": "Commands",
+    "fonts": "Modules",
+    "stats": "Status",
+    "docs": "Guide",
+    "getStarted": "Connect"
   },
   "hero": {
-    "badge": "v1.3 — Now with i18n!",
-    "title": "The Ultimate",
-    "titleHighlight": "Next.js",
-    "titleEnd": "Boilerplate",
-    "subtitle": "Ship your startup in record time. Packed with",
-    "utilities": "185+ utilities",
-    "fonts": "16 fonts",
-    "components": "premium components",
+    "badge": "v2.0 — Powered by Baileys",
+    "title": "The Most Powerful",
+    "titleHighlight": "X-Kira",
+    "titleEnd": "WhatsApp Bot",
+    "subtitle": "Automate your WhatsApp experience with speed and security. Built with",
+    "utilities": "500+ commands",
+    "fonts": "multi-device",
+    "components": "stable library",
     "and": "and",
-    "ctaPrimary": "Get Started Free",
-    "ctaSecondary": "Star on GitHub"
+    "ctaPrimary": "Deploy Now",
+    "ctaSecondary": "View Source"
   },
   "stats": {
-    "utilities": "Utility Functions",
-    "fonts": "Google Fonts",
-    "hooks": "Custom Hooks",
-    "css": "Lines of CSS"
+    "utilities": "Active Commands",
+    "fonts": "Plugins Loaded",
+    "hooks": "Uptime Hours",
+    "css": "Messages Processed"
   },
   "features": {
-    "sectionLabel": "Features",
+    "sectionLabel": "Commands",
     "title": "Everything you need",
-    "subtitle": "A complete foundation for building modern web applications with best practices baked in.",
+    "subtitle": "A complete set of tools to manage your groups, media, and automation needs.",
     "turbopack": {
-      "title": "Turbopack Ready",
-      "description": "Experience 10x faster builds with Next.js Turbopack. Pre-configured for optimal development experience."
+      "title": "Group Management",
+      "description": "Full control over your groups: kick, add, promote, demote, and automated greetings."
     },
     "fonts": {
-      "title": "16 Premium Fonts",
-      "description": "Carefully curated typography system with display, body, serif, mono, and handwriting fonts."
+      "title": "Media Processing",
+      "description": "Convert stickers, download videos, and edit images directly within WhatsApp."
     },
     "utilities": {
-      "title": "185+ Utilities",
-      "description": "Massive library of helper functions for strings, arrays, dates, validation, crypto, and more."
+      "title": "500+ Commands",
+      "description": "From utility tools to fun games, X-Kira comes packed with hundreds of built-in plugins."
     },
     "shadcn": {
-      "title": "shadcn/ui Ready",
-      "description": "Pre-configured with shadcn/ui for beautiful, accessible components out of the box."
+      "title": "Baileys Integration",
+      "description": "Using @whiskeysockets/baileys for the most stable and modern WhatsApp connection."
     },
     "typescript": {
-      "title": "Type Safe",
-      "description": "Strict TypeScript throughout. No 'any' types, full IntelliSense support."
+      "title": "Reliable & Fast",
+      "description": "Optimized performance ensuring your bot responds instantly to every message."
     },
     "hooks": {
-      "title": "20+ Custom Hooks",
-      "description": "Production-ready hooks for debouncing, data fetching, countdown timers, and more."
+      "title": "24/7 Uptime",
+      "description": "Built to stay online. Deploy on any VPS or PaaS with ease and stability."
     },
     "i18n": {
-      "title": "i18n Built-in",
-      "description": "Full internationalization support with next-intl. Easily add multiple languages."
+      "title": "Multi-Language",
+      "description": "Full support for English, Indonesian, and more to serve users worldwide."
     },
     "middleware": {
-      "title": "Middleware Ready",
-      "description": "Pre-configured middleware with security headers, CORS, and authentication patterns."
+      "title": "Security First",
+      "description": "Secure session handling and encrypted communication to keep your data safe."
     }
   },
   "typography": {
-    "sectionLabel": "Typography",
-    "title": "16 Beautiful Fonts",
-    "subtitle": "Pre-loaded with next/font for optimal performance. No layout shift, automatic optimization."
+    "sectionLabel": "Modules",
+    "title": "Modular Architecture",
+    "subtitle": "Easily extend X-Kira with custom plugins and modules. Add functionality as you need it."
   },
   "code": {
-    "sectionLabel": "Developer Experience",
-    "title": "Code that sparks joy",
-    "subtitle": "Intuitive utilities and hooks that feel like they should have been built into React.",
-    "handwritten": "No more utils.ts copy-paste!",
-    "fullyTyped": "Fully Typed",
-    "treeShakeable": "Tree Shakeable",
-    "zeroDeps": "Zero Dependencies"
+    "sectionLabel": "Deployment",
+    "title": "Simple Deployment",
+    "subtitle": "Get your bot up and running in minutes with our streamlined connection process.",
+    "handwritten": "No complex setup required!",
+    "fullyTyped": "Docker Ready",
+    "treeShakeable": "Session Cloud",
+    "zeroDeps": "Easy Pairing"
   },
   "updates": {
-    "sectionLabel": "What's New",
+    "sectionLabel": "Release Notes",
     "title": "Version Updates",
-    "subtitle": "See what's been added in each release.",
+    "subtitle": "Tracking the evolution of X-Kira.",
     "v13": {
-      "title": "v1.3 — Internationalization",
-      "description": "Full i18n support with next-intl. English and Indonesian included. Easy to add more languages."
+      "title": "v2.0 — Baileys Migration",
+      "description": "Complete rewrite using @whiskeysockets/baileys for enhanced stability and speed."
     },
     "v12": {
-      "title": "v1.2 — API & Middleware",
-      "description": "Example API routes with CRUD, pagination. Middleware with security headers and CORS."
+      "title": "v1.5 — Plugin System",
+      "description": "Introduced a new modular plugin system for easier feature additions."
     },
     "v11": {
-      "title": "v1.1 — Extended Typography",
-      "description": "10 new fonts added (total 16). Premium UI redesign with animations and gradient effects."
+      "title": "v1.2 — Media Tools",
+      "description": "Added advanced image and video processing commands."
     },
     "v10": {
       "title": "v1.0 — Initial Release",
-      "description": "145+ utilities, 15+ hooks, 6 fonts, shadcn/ui, Tailwind 4, Next.js 16, React 19."
+      "description": "The birth of X-Kira. Basic group and utility commands."
     }
   },
   "cta": {
-    "title": "Ready to ship faster?",
-    "subtitle": "Start building your next project with Ourin today. Free, open source, and MIT licensed.",
-    "primary": "Start Building",
-    "secondary": "Read Docs"
+    "title": "Ready to start?",
+    "subtitle": "Connect your WhatsApp and start automating today with X-Kira. Open source and free.",
+    "primary": "Get Pairing Code",
+    "secondary": "Documentation"
   },
   "footer": {
-    "description": "The ultimate Next.js boilerplate for modern web development. Ship your startup in record time.",
-    "quickLinks": "Quick Links",
+    "description": "X-Kira is a high-performance WhatsApp bot built with @whiskeysockets/baileys. Automate with confidence.",
+    "quickLinks": "Links",
     "legal": "Legal",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
+    "terms": "Terms & Conditions",
     "license": "MIT License",
-    "madeWith": "Built with",
+    "madeWith": "Made with",
     "by": "by",
-    "starUs": "Star us on GitHub"
+    "starUs": "Star on GitHub"
   },
   "languageSwitcher": {
     "label": "Language",

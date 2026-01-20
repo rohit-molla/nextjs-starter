@@ -1,122 +1,122 @@
 {
   "metadata": {
-    "title": "Ourin - Boilerplate Next.js",
-    "description": "Koleksi komponen, hooks, dan utilitas teropini untuk proyek Next.js Anda."
+    "title": "X-Kira - WhatsApp Bot",
+    "description": "X-Kira WhatsApp Bot dibuat dengan library @whiskeysockets/baileys. Cepat, handal, dan kaya fitur."
   },
   "nav": {
-    "features": "Fitur",
-    "fonts": "Font",
-    "stats": "Statistik",
-    "docs": "Dokumentasi",
-    "getStarted": "Mulai Sekarang"
+    "features": "Perintah",
+    "fonts": "Modul",
+    "stats": "Status",
+    "docs": "Panduan",
+    "getStarted": "Hubungkan"
   },
   "hero": {
-    "badge": "v1.3 — Sekarang dengan i18n!",
-    "title": "Boilerplate",
-    "titleHighlight": "Next.js",
-    "titleEnd": "Terbaik",
-    "subtitle": "Bangun startup Anda dalam waktu singkat. Dilengkapi dengan",
-    "utilities": "185+ utilitas",
-    "fonts": "16 font",
-    "components": "komponen premium",
+    "badge": "v2.0 — Didukung oleh Baileys",
+    "title": "WhatsApp Bot",
+    "titleHighlight": "X-Kira",
+    "titleEnd": "Tercanggih",
+    "subtitle": "Otomatiskan pengalaman WhatsApp Anda dengan cepat dan aman. Dibangun dengan",
+    "utilities": "500+ perintah",
+    "fonts": "multi-device",
+    "components": "library stabil",
     "and": "dan",
-    "ctaPrimary": "Mulai Gratis",
-    "ctaSecondary": "Star di GitHub"
+    "ctaPrimary": "Pasang Sekarang",
+    "ctaSecondary": "Lihat Source"
   },
   "stats": {
-    "utilities": "Fungsi Utilitas",
-    "fonts": "Google Fonts",
-    "hooks": "Custom Hooks",
-    "css": "Baris CSS"
+    "utilities": "Perintah Aktif",
+    "fonts": "Plugin Dimuat",
+    "hooks": "Jam Uptime",
+    "css": "Pesan Diproses"
   },
   "features": {
-    "sectionLabel": "Fitur",
+    "sectionLabel": "Perintah",
     "title": "Semua yang Anda butuhkan",
-    "subtitle": "Fondasi lengkap untuk membangun aplikasi web modern dengan praktik terbaik bawaan.",
+    "subtitle": "Kumpulan alat lengkap untuk mengelola grup, media, dan kebutuhan otomatisasi Anda.",
     "turbopack": {
-      "title": "Siap Turbopack",
-      "description": "Rasakan build 10x lebih cepat dengan Next.js Turbopack. Dikonfigurasi untuk pengalaman development optimal."
+      "title": "Manajemen Grup",
+      "description": "Kontrol penuh atas grup Anda: kick, add, promote, demote, dan sambutan otomatis."
     },
     "fonts": {
-      "title": "16 Font Premium",
-      "description": "Sistem tipografi yang dikurasi dengan font display, body, serif, mono, dan tulisan tangan."
+      "title": "Pemrosesan Media",
+      "description": "Ubah stiker, unduh video, dan edit gambar langsung di dalam WhatsApp."
     },
     "utilities": {
-      "title": "185+ Utilitas",
-      "description": "Library helper function untuk string, array, tanggal, validasi, crypto, dan lainnya."
+      "title": "500+ Perintah",
+      "description": "Dari alat utilitas hingga game seru, X-Kira hadir dengan ratusan plugin bawaan."
     },
     "shadcn": {
-      "title": "Siap shadcn/ui",
-      "description": "Dikonfigurasi dengan shadcn/ui untuk komponen yang indah dan aksesibel."
+      "title": "Integrasi Baileys",
+      "description": "Menggunakan @whiskeysockets/baileys untuk koneksi WhatsApp paling stabil dan modern."
     },
     "typescript": {
-      "title": "Type Safe",
-      "description": "TypeScript ketat di seluruh proyek. Tanpa tipe 'any', dukungan IntelliSense penuh."
+      "title": "Handal & Cepat",
+      "description": "Performa optimal memastikan bot Anda merespons instan setiap pesan."
     },
     "hooks": {
-      "title": "20+ Custom Hooks",
-      "description": "Hooks siap produksi untuk debouncing, data fetching, countdown timer, dan lainnya."
+      "title": "Uptime 24/7",
+      "description": "Dibuat untuk tetap online. Pasang di VPS atau PaaS mana pun dengan mudah dan stabil."
     },
     "i18n": {
-      "title": "i18n Bawaan",
-      "description": "Dukungan internasionalisasi penuh dengan next-intl. Mudah menambah bahasa baru."
+      "title": "Multi-Bahasa",
+      "description": "Dukungan penuh untuk Bahasa Inggris, Indonesia, dan lainnya untuk melayani pengguna global."
     },
     "middleware": {
-      "title": "Middleware Siap",
-      "description": "Middleware yang dikonfigurasi dengan header keamanan, CORS, dan pola autentikasi."
+      "title": "Keamanan Utama",
+      "description": "Penanganan sesi yang aman dan komunikasi terenkripsi untuk menjaga data Anda tetap aman."
     }
   },
   "typography": {
-    "sectionLabel": "Tipografi",
-    "title": "16 Font Indah",
-    "subtitle": "Dimuat dengan next/font untuk performa optimal. Tanpa layout shift, optimisasi otomatis."
+    "sectionLabel": "Modul",
+    "title": "Arsitektur Modular",
+    "subtitle": "Perluas X-Kira dengan plugin dan modul kustom. Tambahkan fungsionalitas sesuai kebutuhan."
   },
   "code": {
-    "sectionLabel": "Pengalaman Developer",
-    "title": "Kode yang membahagiakan",
-    "subtitle": "Utilitas dan hooks intuitif yang seharusnya sudah ada di React.",
-    "handwritten": "Tidak perlu copy-paste utils.ts lagi!",
-    "fullyTyped": "Fully Typed",
-    "treeShakeable": "Tree Shakeable",
-    "zeroDeps": "Tanpa Dependensi"
+    "sectionLabel": "Penyebaran",
+    "title": "Penyebaran Sederhana",
+    "subtitle": "Aktifkan bot Anda dalam hitungan menit dengan proses koneksi kami yang efisien.",
+    "handwritten": "Tanpa pengaturan rumit!",
+    "fullyTyped": "Docker Ready",
+    "treeShakeable": "Session Cloud",
+    "zeroDeps": "Easy Pairing"
   },
   "updates": {
-    "sectionLabel": "Yang Baru",
+    "sectionLabel": "Catatan Rilis",
     "title": "Update Versi",
-    "subtitle": "Lihat apa yang ditambahkan di setiap rilis.",
+    "subtitle": "Melacak evolusi X-Kira.",
     "v13": {
-      "title": "v1.3 — Internasionalisasi",
-      "description": "Dukungan i18n penuh dengan next-intl. Bahasa Inggris dan Indonesia tersedia. Mudah menambah bahasa lain."
+      "title": "v2.0 — Migrasi Baileys",
+      "description": "Penulisan ulang total menggunakan @whiskeysockets/baileys untuk stabilitas dan kecepatan lebih baik."
     },
     "v12": {
-      "title": "v1.2 — API & Middleware",
-      "description": "Contoh API routes dengan CRUD, pagination. Middleware dengan header keamanan dan CORS."
+      "title": "v1.5 — Sistem Plugin",
+      "description": "Memperkenalkan sistem plugin modular baru untuk penambahan fitur yang lebih mudah."
     },
     "v11": {
-      "title": "v1.1 — Tipografi Diperluas",
-      "description": "10 font baru ditambahkan (total 16). Redesain UI premium dengan animasi dan efek gradien."
+      "title": "v1.2 — Alat Media",
+      "description": "Menambahkan perintah pemrosesan gambar dan video tingkat lanjut."
     },
     "v10": {
       "title": "v1.0 — Rilis Awal",
-      "description": "145+ utilitas, 15+ hooks, 6 font, shadcn/ui, Tailwind 4, Next.js 16, React 19."
+      "description": "Kelahiran X-Kira. Perintah grup dan utilitas dasar."
     }
   },
   "cta": {
-    "title": "Siap kirim lebih cepat?",
-    "subtitle": "Mulai bangun proyek Anda berikutnya dengan Ourin hari ini. Gratis, open source, dan berlisensi MIT.",
-    "primary": "Mulai Membangun",
-    "secondary": "Baca Dokumentasi"
+    "title": "Siap untuk memulai?",
+    "subtitle": "Hubungkan WhatsApp Anda dan mulai otomatisasi hari ini dengan X-Kira. Open source dan gratis.",
+    "primary": "Dapatkan Kode Pairing",
+    "secondary": "Dokumentasi"
   },
   "footer": {
-    "description": "Boilerplate Next.js terbaik untuk pengembangan web modern. Bangun startup Anda dalam waktu singkat.",
-    "quickLinks": "Tautan Cepat",
+    "description": "X-Kira adalah WhatsApp bot berperforma tinggi yang dibangun dengan @whiskeysockets/baileys. Otomatiskan dengan percaya diri.",
+    "quickLinks": "Tautan",
     "legal": "Legal",
     "privacy": "Kebijakan Privasi",
-    "terms": "Syarat Layanan",
+    "terms": "Syarat & Ketentuan",
     "license": "Lisensi MIT",
     "madeWith": "Dibuat dengan",
     "by": "oleh",
-    "starUs": "Star kami di GitHub"
+    "starUs": "Star di GitHub"
   },
   "languageSwitcher": {
     "label": "Bahasa",
