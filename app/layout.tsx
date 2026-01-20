@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ourin - Next.js Boilerplate",
-  description: "An opinionated collection of components, hooks, and utilities for your Next.js project.",
+  title: "X-Kira - WhatsApp Bot",
+  description: "X-Kira WhatsApp Bot made with @whiskeysockets/baileys library. Fast, reliable, and feature-rich.",
 };
 
 export default function RootLayout({

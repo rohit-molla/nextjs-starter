@@ -254,6 +254,7 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
 
 // --- Stat Card ---
 function StatCard({ icon, value, label, suffix = '' }: { icon: React.ReactNode; value: number; label: string; suffix?: string }) {
+  const t = useTranslations('stats');
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -302,9 +303,9 @@ function FeatureCard({
     >
       <MagicCard
         className="rounded-2xl cursor-pointer h-full"
-        gradientColor="rgba(139, 92, 246, 0.1)"
-        gradientFrom="#8B5CF6"
-        gradientTo="#EC4899"
+        gradientColor="rgba(34, 197, 94, 0.1)"
+        gradientFrom="#22c55e"
+        gradientTo="#10b981"
         gradientSize={250}
       >
         <div 
@@ -743,10 +744,10 @@ export default function Home() {
       <section id="stats" className="py-20 relative">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-            <StatCard icon={<Package className="w-6 h-6" />} value={185} suffix="+" label={t('stats.utilities')} />
-            <StatCard icon={<Type className="w-6 h-6" />} value={16} label={t('stats.fonts')} />
-            <StatCard icon={<Boxes className="w-6 h-6" />} value={20} suffix="+" label={t('stats.hooks')} />
-            <StatCard icon={<FileCode className="w-6 h-6" />} value={850} suffix="+" label={t('stats.css')} />
+            <StatCard icon={<Zap className="w-6 h-6" />} value={500} suffix="+" label={t('stats.utilities')} />
+            <StatCard icon={<Package className="w-6 h-6" />} value={120} suffix="+" label={t('stats.fonts')} />
+            <StatCard icon={<History className="w-6 h-6" />} value={24} suffix="/7" label={t('stats.hooks')} />
+            <StatCard icon={<Globe className="w-6 h-6" />} value={1000} suffix="K+" label={t('stats.css')} />
           </div>
         </div>
       </section>
@@ -932,18 +933,18 @@ export default function Home() {
 
           <div className="max-w-2xl mx-auto">
             <UpdateCard 
-              version="v1.3" 
+              version="v2.0" 
               title={t('updates.v13.title')} 
               description={t('updates.v13.description')} 
               isLatest 
             />
             <UpdateCard 
-              version="v1.2" 
+              version="v1.5" 
               title={t('updates.v12.title')} 
               description={t('updates.v12.description')} 
             />
             <UpdateCard 
-              version="v1.1" 
+              version="v1.2" 
               title={t('updates.v11.title')} 
               description={t('updates.v11.description')} 
             />
@@ -1005,14 +1006,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/logo.png" alt="Ourin Logo" width={40} height={40} className="rounded-lg" />
-                <span className="font-display font-bold text-xl">Ourin</span>
+                <Image src="/logo.png" alt="X-Kira Logo" width={40} height={40} className="rounded-lg" />
+                <span className="font-display font-bold text-xl">X-Kira</span>
               </div>
               <p className="text-muted-foreground max-w-sm leading-relaxed mb-4 font-sans">
                 {t('footer.description')}
               </p>
               <div className="flex gap-3">
-                <a href="https://github.com/LuckyArch/ourin-nextjs-starter" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
+                <a href="https://github.com/X-Kira/whatsapp-bot" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
               </div>
@@ -1022,8 +1023,8 @@ export default function Home() {
               <h4 className="font-display font-bold mb-4">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#features" className="hover:text-foreground transition-colors">{t('nav.features')}</a></li>
-                <li><a href="#fonts" className="hover:text-foreground transition-colors">{t('nav.fonts')}</a></li>
-                <li><a href="https://github.com/LuckyArch/ourin-nextjs-starter" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">{t('nav.docs')}</a></li>
+                <li><a href="#hooks" className="hover:text-foreground transition-colors">{t('nav.fonts')}</a></li>
+                <li><a href="https://github.com/X-Kira/whatsapp-bot" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">{t('nav.docs')}</a></li>
               </ul>
             </div>
 
@@ -1032,16 +1033,16 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/privacy" className="hover:text-foreground transition-colors">{t('footer.privacy')}</Link></li>
                 <li><Link href="/terms" className="hover:text-foreground transition-colors">{t('footer.terms')}</Link></li>
-                <li><a href="https://github.com/LuckyArch/ourin-nextjs-starter/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">{t('footer.license')}</a></li>
+                <li><a href="https://github.com/X-Kira/whatsapp-bot/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">{t('footer.license')}</a></li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground font-sans">
-              © {new Date().getFullYear()} Ourin. {t('footer.madeWith')} <Heart className="w-4 h-4 inline text-red-500" /> {t('footer.by')}{' '}
-              <a href="https://github.com/LuckyArch" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
-                Fauzan Adyatma P
+              © {new Date().getFullYear()} X-Kira. {t('footer.madeWith')} <Heart className="w-4 h-4 inline text-red-500" /> {t('footer.by')}{' '}
+              <a href="https://github.com/X-Kira" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+                X-Kira Team
               </a>
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">

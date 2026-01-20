@@ -34,73 +34,52 @@ export default function PrivacyPage() {
             
             <div className="prose prose-gray dark:prose-invert max-w-none space-y-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Last updated: December 17, 5
+                Last updated: January 20, 2026
               </p>
 
               <section className="space-y-4">
                 <h2 className="text-2xl font-display font-bold">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Welcome to Ourin ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
+                  Welcome to X-Kira ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your data when you use our WhatsApp bot and website.
                 </p>
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">2. Data We Collect</h2>
+                <h2 className="text-2xl font-display font-bold">2. Data Handling</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Since Ourin is an open-source boilerplate template, we do not collect any personal data from users who download or use our template. The template itself does not include any tracking, analytics, or data collection mechanisms.
+                  X-Kira is a WhatsApp bot built with the @whiskeysockets/baileys library. We do not store your private messages on our servers. The bot operates by processing messages in real-time to execute commands.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  However, when you visit our GitHub repository or documentation website, third-party services (such as GitHub) may collect certain data in accordance with their own privacy policies.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">3. How We Use Your Data</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  As we do not collect personal data directly, we do not use your data for any purposes. If you choose to contribute to our project (e.g., via pull requests or issues), any public contributions will be visible on our repository.
+                  Session data is stored locally on your deployment instance and is encrypted to ensure that only the bot can access your WhatsApp connection.
                 </p>
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">4. Open Source Nature</h2>
+                <h2 className="text-2xl font-display font-bold">3. No Third-Party Sharing</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ourin is distributed under the MIT License, which means you are free to use, modify, and distribute the software. When you use this template, you are responsible for implementing your own privacy practices for any application you build with it.
+                  We do not sell, trade, or otherwise transfer your personal information or WhatsApp data to outside parties. Your data remains within your own deployment environment.
                 </p>
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">5. Third-Party Services</h2>
+                <h2 className="text-2xl font-display font-bold">4. Open Source</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Our template may include integrations with third-party services (e.g., analytics, authentication providers). If you choose to implement these features, you should review the privacy policies of those services and ensure compliance with applicable laws.
+                  X-Kira is open-source. You are encouraged to review the source code on our GitHub repository to verify our data handling practices and security measures.
                 </p>
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">6. Your Rights</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Depending on your location, you may have certain rights regarding your personal data, including the right to access, correct, or delete your data. Since we do not collect personal data, these rights would apply to any third-party services you interact with.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">7. Contact Us</h2>
+                <h2 className="text-2xl font-display font-bold">5. Contact Us</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   If you have any questions about this Privacy Policy, please contact us through our GitHub repository at{' '}
                   <a 
-                    href="https://github.com/LuckyArch/ourin-nextjs-starter" 
+                    href="https://github.com/X-Kira/whatsapp-bot" 
                     className="text-primary hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    github.com/LuckyArch/ourin-nextjs-starter
+                    github.com/X-Kira/whatsapp-bot
                   </a>.
-                </p>
-              </section>
-
-              <section className="space-y-4">
-                <h2 className="text-2xl font-display font-bold">8. Changes to This Policy</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last updated" date.
                 </p>
               </section>
             </div>
@@ -112,7 +91,7 @@ export default function PrivacyPage() {
       <footer className="py-8 border-t border-border/40">
         <div className="container px-4 md:px-6 mx-auto text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Ourin. Built by Fauzan Adyatma P.
+            © {new Date().getFullYear()} X-Kira. Developed by X-Kira Team.
           </p>
         </div>
       </footer>
