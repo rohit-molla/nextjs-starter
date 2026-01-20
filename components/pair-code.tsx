@@ -88,14 +88,16 @@ export function PairCode({ onQRClick }: { onQRClick: () => void }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="flex justify-center"
+                className="text-center space-y-4"
               >
+                <h3 className="text-xl font-bold">Get Started</h3>
+                <p className="text-sm text-muted-foreground">Choose how you want to connect</p>
                 <button
                   onClick={handleGetStarted}
-                  className="group relative flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(var(--primary),0.3)]"
+                  className="w-full bg-primary text-primary-foreground py-3 rounded-2xl font-bold hover:opacity-90 transition-opacity"
                 >
-                  <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  <span>Get Started</span>
+                  <Rocket className="w-5 h-5 inline mr-2" />
+                  Continue
                 </button>
               </motion.div>
             )}

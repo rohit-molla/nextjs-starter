@@ -630,16 +630,27 @@ export default function Home() {
             <span className="text-foreground font-semibold font-raleway underline decoration-pink-500 decoration-2 underline-offset-4">{t('hero.fonts')}</span>, {t('hero.and')}{' '}
             <span className="text-foreground font-semibold font-manrope underline decoration-cyan-500 decoration-2 underline-offset-4">{t('hero.components')}</span>.
           </motion.p>
-
-          {/* New PairCode Component replacing the old button */}
+     {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="w-full max-w-md mt-4"
+            className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto"
           >
+        
             <PairCode onQRClick={() => setIsQRModalOpen(true)} />
+                  <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto h-14 px-8 rounded-full text-base gap-2 hover:bg-muted/50"
+              onMouseEnter={playHover}
+              onClick={playClick}
+            >
+              <Github className="w-5 h-5" />
+              {t("hero.ctaSecondary")}
+            </Button>
           </motion.div>
+
 
           {/* Copy Command */}
           <motion.div

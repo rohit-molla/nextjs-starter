@@ -15,7 +15,7 @@ export function QRModal({ isOpen, onClose }: QRModalProps) {
   const [qrCode, setQrCode] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [status, setStatus] = useState<{ message: string; type: 'info' | 'success' | 'error' }>({
-    message: '🔄 Initializing...',
+    message: 'Initializing...',
     type: 'info',
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +30,7 @@ export function QRModal({ isOpen, onClose }: QRModalProps) {
     setIsLoading(true);
 
     try {
-      setStatus({ message: '🔄 Connecting to WhatsApp servers...', type: 'info' });
+      setStatus({ message: 'Connecting to WhatsApp servers...', type: 'info' });
 
       // Client-side call to server-side API endpoint
       const response = await axios.get('/api/qr', { timeout: 45000 });
@@ -38,13 +38,13 @@ export function QRModal({ isOpen, onClose }: QRModalProps) {
       if (response.data?.success && response.data?.qr) {
         setSessionId(response.data.sessionId);
         setQrCode(response.data.qr);
-        setStatus({ message: '✅ QR Code ready! Scan with WhatsApp', type: 'success' });
+        setStatus({ message: 'QR Code ready! Scan with WhatsApp', type: 'success' });
 
         // Auto-refresh QR after 45 seconds
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
           if (sessionId === response.data.sessionId) {
-            setStatus({ message: '⏱️ QR Code expired. Refreshing...', type: 'info' });
+            setStatus({ message: 'QR Code expired. Refreshing...', type: 'info' });
             refreshQR();
           }
         }, 45000);
@@ -54,12 +54,12 @@ export function QRModal({ isOpen, onClose }: QRModalProps) {
     } catch (error: any) {
       console.error('QR generation error:', error);
 
-      let errorMessage = '❌ Failed to generate QR code';
+      let errorMessage = 'Failed to generate QR code';
       if (error.code === 'ECONNABORTED') {
-        errorMessage = '⏱️ Connection timeout. Retrying...';
+        errorMessage = 'Connection timeout. Retrying...';
         setTimeout(refreshQR, 2000);
       } else if (error.response?.data?.error) {
-        errorMessage = '⚠️ ' + error.response.data.error;
+        errorMessage = error.response.data.error;
       }
 
       setStatus({ message: errorMessage, type: 'error' });
